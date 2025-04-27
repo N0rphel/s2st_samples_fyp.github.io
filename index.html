@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dzongkha and English Speech to Speech Translation Samples</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="paper-head">
+			<div class="container">
+				<h1>Dzongkha & English Speech to Speech Translation</h1>
+				<div class="authors">
+					Tshering Norphel, Dorji Phuntsho, Tashi Wangchuk, Sumit Adhikari,
+					Karma Wangchuk
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="container">
+				<div class="abstract">
+					<p>
+						Speech to Speech translation model translates speech from one
+						language to speech in another language. There are two methods which
+						are Cascaded model that uses Automatic Speech Recognition model to
+						generate transcript from audio, Machine Translation Model to
+						translate text in one language to another and then the translated
+						text to speech using a Text-to-Speech model. The other approach is
+						training a end-to-end direct model which is directly capable of
+						translating an input audio to translated audio. Although, our BLUE
+						score is not as great as the subject itself, the samples below
+						demonstrates the output of our research.
+					</p>
+				</div>
+
+				<section class="setup">
+					<h2>Direct S2UT+Vocoder model</h2>
+					<p class="setup-description">
+						S2UT model is trained to predict the discrete units of the target
+						speech where the translated/target audio is synthesized by a
+						HiFi-GAN vocoder
+					</p>
+
+					<div class="comparison-info">
+						<p>
+							We compare end-to-end model trained with source and target audios
+							with the corresponding reference text.
+						</p>
+					</div>
+
+					<div class="comparison-table">
+						<div class="table-header">
+							<div class="column">Source (Dzongkha)</div>
+							<div class="column">Target (English)</div>
+							<div class="column">S2UT+Vocoder Translation</div>
+						</div>
+
+						<h5>Sample 1:</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio1"
+									src="audios/s2ut_dz_en/dzo/maudio_47836.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio1')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio2"
+									src="audios/s2ut_dz_en/eng/maudio_47836.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio2')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio3"
+									src="audios/s2ut_dz_en/predicted_eng/1_pred.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio3')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<h5>Sample 2:</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio4"
+									src="audios/s2ut_dz_en/dzo/maudio_369712.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio4')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio5"
+									src="audios/s2ut_dz_en/eng/maudio_369712.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio5')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio6"
+									src="audios/s2ut_dz_en/predicted_eng/48_pred.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio6')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- <h5>Sample 3:</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio7"
+									src="audios/s2ut_dz_en/dzo/maudio_369379.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio7')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio8"
+									src="audios/s2ut_dz_en/eng/maudio_369379.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio8')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio9"
+									src="audios/s2ut_dz_en/predicted_eng/167_pred.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio9')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div> -->
+
+						<div class="table-header">
+							<div class="column">Source (English)</div>
+							<div class="column">Target (Dzongkha)</div>
+							<div class="column">S2UT+Vocoder Translation</div>
+						</div>
+
+						<h5>Sample 1:</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio1"
+									src="audios/s2ut_dz_en/dzo/maudio_47836.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio1')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio2"
+									src="audios/s2ut_dz_en/eng/maudio_47836.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio2')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio3"
+									src="audios/s2ut_dz_en/predicted_eng/1_pred.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio3')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<h5>Sample 2:</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio4"
+									src="audios/s2ut_dz_en/dzo/maudio_369712.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio4')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio5"
+									src="audios/s2ut_dz_en/eng/maudio_369712.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio5')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio6"
+									src="audios/s2ut_dz_en/predicted_eng/48_pred.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio6')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<h5>Sample 3:</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio7"
+									src="audios/s2ut_dz_en/dzo/maudio_369379.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio7')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio8"
+									src="audios/s2ut_dz_en/eng/maudio_369379.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio8')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio9"
+									src="audios/s2ut_dz_en/predicted_eng/167_pred.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio9')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+	</body>
+	<script>
+		function togglePlay(audioId) {
+			const audio = document.getElementById(audioId);
+			const button =
+				audio.previousElementSibling.nextElementSibling.querySelector(
+					".play-btn"
+				);
+
+			if (audio.paused) {
+				// Pause all other audios first
+				document.querySelectorAll("audio").forEach((a) => {
+					if (a.id !== audioId && !a.paused) {
+						a.pause();
+						const btn =
+							a.previousElementSibling.nextElementSibling.querySelector(
+								".play-btn"
+							);
+						btn.innerHTML = "▶ Play";
+					}
+				});
+
+				// Play this audio
+				audio.play();
+				button.innerHTML = "⏸ Pause";
+			} else {
+				// Pause this audio
+				audio.pause();
+				button.innerHTML = "▶ Play";
+			}
+		}
+
+		// Add event listeners to reset buttons when audio ends
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll("audio").forEach((audio) => {
+				audio.addEventListener("ended", function () {
+					const button =
+						this.previousElementSibling.nextElementSibling.querySelector(
+							".play-btn"
+						);
+					button.innerHTML = "▶ Play";
+				});
+			});
+		});
+	</script>
+</html>
