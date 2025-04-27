@@ -207,6 +207,120 @@
 									<img src="wave.jpg" alt="Waveform visualization" />
 								</div>
 								<audio
+									id="audio10"
+									src="audios/s2ut_en_dz/eng/99985.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio10')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio11"
+									src="audios/s2ut_en_dz/dzo/99985.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio11')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio12"
+									src="audios/s2ut_en_dz/gen_dzo_1.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio12')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+						<h5>Sample 2:</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio13"
+									src="audios/s2ut_en_dz/eng/100009.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio13')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio14"
+									src="audios/s2ut_en_dz/dzo/100009.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio14')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio15"
+									src="audios/s2ut_en_dz/gen_dzo_2.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio15')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</section>
+				<section class="setup">
+					<h2>Cascaded Translation Models</h2>
+					<p class="setup-description">
+						Cascaded model employs three model where the input of one model is the output of the previous model. The input to the pipeline is audio and the output is the translated audio.
+					</p>
+
+					<div class="comparison-info">
+						<p>
+							We evaluate the cascaded models which are trained individually on the same test dataset used to evaluate the direct model
+						</p>
+					</div>
+
+					<div class="comparison-table">
+						<div class="table-header">
+							<div class="column">Source (Dzongkha)</div>
+							<div class="column">ASR Generated Dzongkha Transcript</div>
+							<div class="column">Machine Translated English Transcript</div>
+							<div class="column">Target (English)</div>
+							<div class="column">TTS Generated Audio</div>
+						</div>
+
+						<h5>Sample 1:</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
 									id="audio1"
 									src="audios/s2ut_dz_en/dzo/maudio_47836.wav"
 								></audio>
@@ -215,6 +329,12 @@
 										▶ Play
 									</button>
 								</div>
+							</div>
+							<div class="audio-item">
+								<p>མེ་དི་མནོ་མི་ཚ་མི་ཡིག་ཁ་འོང་ཏོག་ལཏག་དུ</p>
+							</div>
+							<div class="audio-item">
+								<p>Nice cute, you think he has.</p>
 							</div>
 							<div class="audio-item">
 								<div class="waveform">
@@ -235,17 +355,16 @@
 									<img src="wave.jpg" alt="Waveform visualization" />
 								</div>
 								<audio
-									id="audio3"
-									src="audios/s2ut_dz_en/predicted_eng/1_pred.wav"
+									id="audio21"
+									src="audios/cascaded_en_dz/cascaded_gen_1_1.wav"
 								></audio>
 								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio3')">
+									<button class="play-btn" onclick="togglePlay('audio21')">
 										▶ Play
 									</button>
 								</div>
 							</div>
-						</div>
-
+						</div>	
 						<h5>Sample 2:</h5>
 						<div class="audio-samples">
 							<div class="audio-item">
@@ -255,6 +374,26 @@
 								<audio
 									id="audio4"
 									src="audios/s2ut_dz_en/dzo/maudio_369712.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio5')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<p>ང་གིས་ད་ཅི་ཚག་ཡང་ན་ཁྱན་མ་སྦེ་ཡོད་མི་ཚུ་དམའི་སར་གྱིད་པར་འདི་ཡང་ནག་ཅིག་ཚུགས་འཕོན་བྱུང་གིས་པར་འཐོབ་མི་དོན་ལུ་ལོག་འདོག་རར་བཟོ་གིན།</p>
+							</div>
+							<div class="audio-item">
+								<p>So I can re-size this time as I found things not very obvious for all those people.</p>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio5"
+									src="audios/s2ut_dz_en/eng/maudio_369712.wav"
 								></audio>
 								<div class="audio-controls">
 									<button class="play-btn" onclick="togglePlay('audio4')">
@@ -267,78 +406,136 @@
 									<img src="wave.jpg" alt="Waveform visualization" />
 								</div>
 								<audio
-									id="audio5"
-									src="audios/s2ut_dz_en/eng/maudio_369712.wav"
+									id="audio23"
+									src="audios/cascaded_en_dz/cascaded_gen_2_2.wav"
 								></audio>
 								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio5')">
-										▶ Play
-									</button>
-								</div>
-							</div>
-							<div class="audio-item">
-								<div class="waveform">
-									<img src="wave.jpg" alt="Waveform visualization" />
-								</div>
-								<audio
-									id="audio6"
-									src="audios/s2ut_dz_en/predicted_eng/48_pred.wav"
-								></audio>
-								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio6')">
+									<button class="play-btn" onclick="togglePlay('audio23')">
 										▶ Play
 									</button>
 								</div>
 							</div>
 						</div>
-
-						<h5>Sample 3:</h5>
-						<div class="audio-samples">
-							<div class="audio-item">
-								<div class="waveform">
-									<img src="wave.jpg" alt="Waveform visualization" />
-								</div>
-								<audio
-									id="audio7"
-									src="audios/s2ut_dz_en/dzo/maudio_369379.wav"
-								></audio>
-								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio7')">
-										▶ Play
-									</button>
-								</div>
+						<p>Comment: This is an example of error propagation where an inaccurate output of one model affects the whole system. Here, Dzongkha ASR seems to be the root of the translation error.</p>
+						<div class="comparison-table">
+							<div class="table-header">
+								<div class="column">Source (English)</div>
+								<div class="column">ASR Generated English Transcript</div>
+								<div class="column">Machine Translated Dzongkha Transcript</div>
+								<div class="column">Target (Dzongkha)</div>
+								<div class="column">TTS Generated Audio</div>
 							</div>
-							<div class="audio-item">
-								<div class="waveform">
-									<img src="wave.jpg" alt="Waveform visualization" />
+	
+							<h5>Sample 1:</h5>
+							<div class="audio-samples">
+								<div class="audio-item">
+									<div class="waveform">
+										<img src="wave.jpg" alt="Waveform visualization" />
+									</div>
+									<audio
+										id="audio1"
+										src="audios/s2ut_dz_en/dzo/maudio_47836.wav"
+									></audio>
+									<div class="audio-controls">
+										<button class="play-btn" onclick="togglePlay('audio2')">
+											▶ Play
+										</button>
+									</div>
 								</div>
-								<audio
-									id="audio8"
-									src="audios/s2ut_dz_en/eng/maudio_369379.wav"
-								></audio>
-								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio8')">
-										▶ Play
-									</button>
+								<div class="audio-item">
+									<p>Mary is extremely attractive.</p>
 								</div>
-							</div>
-							<div class="audio-item">
-								<div class="waveform">
-									<img src="wave.jpg" alt="Waveform visualization" />
+								<div class="audio-item">
+									<p>མེ་རི་གནམ་མེད་ས་མེད་ཡིད་ཁར་འོང་ཏོག་ཏོ་འདུག།</p>
 								</div>
-								<audio
-									id="audio9"
-									src="audios/s2ut_dz_en/predicted_eng/167_pred.wav"
-								></audio>
-								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio9')">
-										▶ Play
-									</button>
+								<div class="audio-item">
+									<div class="waveform">
+										<img src="wave.jpg" alt="Waveform visualization" />
+									</div>
+									<audio
+										id="audio2"
+										src="audios/s2ut_dz_en/eng/maudio_47836.wav"
+									></audio>
+									<div class="audio-controls">
+										<button class="play-btn" onclick="togglePlay('audio1')">
+											▶ Play
+										</button>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
+								<div class="audio-item">
+									<div class="waveform">
+										<img src="wave.jpg" alt="Waveform visualization" />
+									</div>
+									<audio
+										id="audio31"
+										src="audios/cascaded_en_dz/cascaded_gen_1.wav"
+									></audio>
+									<div class="audio-controls">
+										<button class="play-btn" onclick="togglePlay('audio31')">
+											▶ Play
+										</button>
+									</div>
+								</div>
+							</div>	
+							<h5>Sample 2:</h5>
+							<div class="audio-samples">
+								<div class="audio-item">
+									<div class="waveform">
+										<img src="wave.jpg" alt="Waveform visualization" />
+									</div>
+									<audio
+										id="audio41"
+										src="audios/s2ut_en_dz/eng/99985.wav"
+									></audio>
+									<div class="audio-controls">
+										<button class="play-btn" onclick="togglePlay('audio41')">
+											▶ Play
+										</button>
+									</div>
+								</div>
+								<div class="audio-item">
+									<p>There is some wind.</p>
+								</div>
+								<div class="audio-item">
+									<p>རླུང་མ་ཨ་ཙི་རེ་འཕུ་དེས།</p>
+								</div>
+								<div class="audio-item">
+									<div class="waveform">
+										<img src="wave.jpg" alt="Waveform visualization" />
+									</div>
+									<audio
+										id="audio42"
+										src="audios/s2ut_en_dz/dzo/99985.wav"
+									></audio>
+									<div class="audio-controls">
+										<button class="play-btn" onclick="togglePlay('audio42')">
+											▶ Play
+										</button>
+									</div>
+								</div>
+								<div class="audio-item">
+									<div class="waveform">
+										<img src="wave.jpg" alt="Waveform visualization" />
+									</div>
+									<audio
+										id="audio46"
+										src="audios/cascaded_dz_en/cascaded_gen_2.wav"
+									></audio>
+									<div class="audio-controls">
+										<button class="play-btn" onclick="togglePlay('audio46')">
+											▶ Play
+										</button>
+									</div>
+								</div>	
 				</section>
+			</div>
+			<div class="komi-container"> 
+				<div class="text-section">
+					<p>Sorry, we haven't deployed our website. The model size is too huge to load on my laptop. I mean my COMPUTER since my laptop is literally a deskptop pc now TwT</p>
+				</div>
+				<div class="image-section">
+					<img src="sticker_3.avif" alt="sad-komi">
+				</div>
 			</div>
 		</main>
 	</body>

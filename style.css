@@ -203,3 +203,31 @@ body {
 		display: none;
 	}
 }
+
+
+.text-section {
+	font-size: larger;
+	flex: 2; /* Takes up 2/3 of the space */
+	padding-top: 80px;
+}
+
+.image-section {
+	flex: 1; /* Takes up 1/3 of the space */
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-section img {
+	max-width: 100%;
+	height: auto;
+}
+
+.komi-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: flex;
+	width: 100%;
+}
