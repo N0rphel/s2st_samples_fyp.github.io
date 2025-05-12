@@ -290,7 +290,7 @@
 								</div>
 							</div>
 						</div>
-						
+						<p>S2UT is able to translate the audios poorly. However, since it was trained on a single female speaker for both input and output audio, it fails in real-time translations. This indicates the need to have robust and variety of speakers for input audio while training.</p>
 					</div>
 				</section>
 				<section class="setup">
@@ -310,11 +310,10 @@
 							<div class="column">Source (Dzongkha)</div>
 							<div class="column">ASR Generated Dzongkha Transcript</div>
 							<div class="column">Machine Translated English Transcript</div>
-							<div class="column">Target (English)</div>
-							<div class="column">TTS Generated Audio</div>
+							<div class="column">TTS Generated Audio (Target)</div>
 						</div>
 
-						<h5>Sample 1:</h5>
+						<h5>Sample 1: Short Sentence</h5>
 						<div class="audio-samples">
 							<div class="audio-item">
 								<div class="waveform">
@@ -336,20 +335,7 @@
 							<div class="audio-item">
 								<p>Nice cute, you think he has.</p>
 							</div>
-							<div class="audio-item">
-								<div class="waveform">
-									<img src="wave.jpg" alt="Waveform visualization" />
-								</div>
-								<audio
-									id="audio2"
-									src="audios/s2ut_dz_en/eng/maudio_47836.wav"
-								></audio>
-								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio2')">
-										▶ Play
-									</button>
-								</div>
-							</div>
+							
 							<div class="audio-item">
 								<div class="waveform">
 									<img src="wave.jpg" alt="Waveform visualization" />
@@ -365,68 +351,175 @@
 								</div>
 							</div>
 						</div>	
-						<h5>Sample 2:</h5>
+						
+						<p>Comment: This is an example of error propagation where an inaccurate output of one model affects the whole system. Here, Dzongkha ASR seems to be the root of the translation error.</p>
+						
+						<h5>Sample 2: Medium Sentence</h5>
 						<div class="audio-samples">
 							<div class="audio-item">
 								<div class="waveform">
 									<img src="wave.jpg" alt="Waveform visualization" />
 								</div>
 								<audio
-									id="audio4"
-									src="audios/s2ut_dz_en/dzo/maudio_369712.wav"
+									id="audio201"
+									src="audios/testing/mediumsentence.wav"
 								></audio>
 								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio4')">
+									<button class="play-btn" onclick="togglePlay('audio201')">
 										▶ Play
 									</button>
 								</div>
 							</div>
 							<div class="audio-item">
-								<p>ང་གིས་ད་ཅི་ཚག་ཡང་ན་ཁྱན་མ་སྦེ་ཡོད་མི་ཚུ་དམའི་སར་གྱིད་པར་འདི་ཡང་ནག་ཅིག་ཚུགས་འཕོན་བྱུང་གིས་པར་འཐོབ་མི་དོན་ལུ་ལོག་འདོག་རར་བཟོ་གིན།</p>
+								<p>ཁོ་ར་གིས་བརྩམས་དེ་ཡོད་པའི་ཞབས་ཁྲ་འདི་འཐེན་ཚར་ཞིནམ་ལས་ཁོ་རའགི་མི་ཚེ་གྱི་སྲུང་འཏི་གོ་བཙུགས་ཅི།</p>
 							</div>
 							<div class="audio-item">
-								<p>So I can re-size this time as I found things not very obvious for all those people.</p>
+								<p>After singing his own composed song, he started his life story.</p>
 							</div>
 							<div class="audio-item">
 								<div class="waveform">
 									<img src="wave.jpg" alt="Waveform visualization" />
 								</div>
 								<audio
-									id="audio5"
-									src="audios/s2ut_dz_en/eng/maudio_369712.wav"
+									id="audio202"
+									src="audios/testing/mediumt.wav"
 								></audio>
 								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio5')">
-										▶ Play
-									</button>
-								</div>
-							</div>
-							<div class="audio-item">
-								<div class="waveform">
-									<img src="wave.jpg" alt="Waveform visualization" />
-								</div>
-								<audio
-									id="audio23"
-									src="audios/cascaded_en_dz/cascaded_gen_2_2.wav"
-								></audio>
-								<div class="audio-controls">
-									<button class="play-btn" onclick="togglePlay('audio23')">
+									<button class="play-btn" onclick="togglePlay('audio202')">
 										▶ Play
 									</button>
 								</div>
 							</div>
 						</div>
-						<p>Comment: This is an example of error propagation where an inaccurate output of one model affects the whole system. Here, Dzongkha ASR seems to be the root of the translation error.</p>
+
+						<h5>Sample 3:Sentence with official terms</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio203"
+									src="audios/testing/government terms.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio203')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<p>རྒྱལ་ཡོངས་རྩིས་ཅུད་བསྐད་འཛིན་གྱིས་འཛམ་གླིང་དངུལ་ཁང་དང་མཉམ་འབྲེལ་གྱི་ཐོག་ལས་རྒྱལ་ཁབ་ནང་ལུ་དབུལ་ཕོངས་གནས་ཚད་ཀྱི་ཐོག་ལུ་ཞིབ་རསོལ་ཅེག་འབད་མི་དང་འཁྲིལཝ་ད་གཞན་མའི་གོང་འཕེལ་འགྱོ་བའི་གང་འབད་མི་རྒྱལ་ཁབ་ཚུ་དང་ཕྱདཔ་དང་འབྲུག་རྒྱལ་ཁབ་ཀྱིས་དབུལ་ཕོངས་ཀི་གནས་ཚད་མར་ཕབ་འབད་ནིས་ལུ་འབྲུབ་འབྲོས་སྦོམ་སྦེ་ར་བྟོན་ཡོདཔ་ཨིན་མས།</p>
+							</div>
+							<div class="audio-item">
+								<p>In collaboration with the World Bank, Bhutan National Statistics Authority is in agreement with the countrys high level of poverty in the country and Bhutanese countries to reduce poverty in the country compared to other developed countries.
+								</p>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio204"
+									src="audios/testing/government_t.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio204')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<h5>Sample 4:Sentence with Year</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio205"
+									src="audios/testing/year.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio205')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<p>སྤྱི་ལོ་ཉིས་སྟོང་བཅུ་གཉིས་ལུ་འབྲུག་གི་ཚོ་བའི་གནས་ཚིད་ཐོག་ལུ་ཞི་བཅུག་ཅིག་འགོ་འདྲེན་འཐབ་མི་དང་འཁྲིལ་བ་ཅིན་མི་རེ་གྱིས་ཟླཝ་རེ་ནང་ལུ་ཟ་སྤྱོད་འབད་བའི་ཟེད་འགྲོ་འདི་ལོ་ལྔ་གི་ནང་འཁོད་ཡུདཔ་ཅིག་ལོག་ལྟབ་སྦེ་ར་ཡར་སེམས་སོང་སྟེ་ཡོདཔ་སྦེ་ཨིན་མས།</p>
+							</div>
+							<div class="audio-item">
+								<p>The cost of consuming a monthly consumption is nearly doubled in the last five years as per the Bhutan Lifestyle Assurance Assurance exercise.
+								</p>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio206"
+									src="audios/testing/government_t.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio206')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+					
+						<h5>Sample 5:Sentence with name</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio207"
+									src="audios/testing/name of place and people.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio207')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<p>ངེ་གི་མི་ཐུགས་རྗེ་དབང་ཕྱུག་ཟེར་སླབ་ཨིན།</p>
+							</div>
+							<div class="audio-item">
+								<p>My name is My grace.
+								</p>
+							</div>
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio208"
+									src="audios/testing/name.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio208')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<p>Few names of people and places are mistranslated by the Dzongkha to English translation model.</p>
+
 						<div class="comparison-table">
 							<div class="table-header">
 								<div class="column">Source (English)</div>
 								<div class="column">ASR Generated English Transcript</div>
 								<div class="column">Machine Translated Dzongkha Transcript</div>
-								<div class="column">Target (Dzongkha)</div>
-								<div class="column">TTS Generated Audio</div>
+								<div class="column">TTS Generated Audio (Dzongkha)</div>
 							</div>
 	
-							<h5>Sample 1:</h5>
+							<h5>Sample 1: Short Sentence with name</h5>
 							<div class="audio-samples">
 								<div class="audio-item">
 									<div class="waveform">
@@ -448,20 +541,7 @@
 								<div class="audio-item">
 									<p>མེ་རི་གནམ་མེད་ས་མེད་ཡིད་ཁར་འོང་ཏོག་ཏོ་འདུག།</p>
 								</div>
-								<div class="audio-item">
-									<div class="waveform">
-										<img src="wave.jpg" alt="Waveform visualization" />
-									</div>
-									<audio
-										id="audio2"
-										src="audios/s2ut_dz_en/eng/maudio_47836.wav"
-									></audio>
-									<div class="audio-controls">
-										<button class="play-btn" onclick="togglePlay('audio1')">
-											▶ Play
-										</button>
-									</div>
-								</div>
+								
 								<div class="audio-item">
 									<div class="waveform">
 										<img src="wave.jpg" alt="Waveform visualization" />
@@ -477,7 +557,7 @@
 									</div>
 								</div>
 							</div>	
-							<h5>Sample 2:</h5>
+							<h5>Sample 2: Short Sentence</h5>
 							<div class="audio-samples">
 								<div class="audio-item">
 									<div class="waveform">
@@ -499,20 +579,7 @@
 								<div class="audio-item">
 									<p>རླུང་མ་ཨ་ཙི་རེ་འཕུ་དེས།</p>
 								</div>
-								<div class="audio-item">
-									<div class="waveform">
-										<img src="wave.jpg" alt="Waveform visualization" />
-									</div>
-									<audio
-										id="audio42"
-										src="audios/s2ut_en_dz/dzo/99985.wav"
-									></audio>
-									<div class="audio-controls">
-										<button class="play-btn" onclick="togglePlay('audio42')">
-											▶ Play
-										</button>
-									</div>
-								</div>
+								
 								<div class="audio-item">
 									<div class="waveform">
 										<img src="wave.jpg" alt="Waveform visualization" />
@@ -527,11 +594,166 @@
 										</button>
 									</div>
 								</div>	
+							</div>
+						<h5>Sample 3: Sentence with Date</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio101"
+									src="audios/samples/dates.mp3"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio101')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<p>The project is scheduled to start on June 10 and finish by the end of August.</p>
+							</div>
+							<div class="audio-item">
+								<p>ལས་འགུལ་འདི་ སྤྱི་ཟླ་དྲུག་པའི་སྤྱི་ཚེས་ ༡༠ ལུ་འགོ་བཙུགས་ནི་དང་ སྤྱི་ཟླ་བརྒྱད་པའི་ཟླ་མཇུག་ལུ་མཇུག་བསྡུ་ནིའི་ལས་འཆར་བཟོ་ཡི།</p>
+							</div>
+							
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio102"
+									src="audios/samples/dates.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio102')">
+										▶ Play
+									</button>
+								</div>
+							</div>	
+						</div>
+						<h5>Sample 4: Sentence with numbers</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio103"
+									src="audios/samples/money.mp3"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio103')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<p>Give me $500</p>
+							</div>
+							<div class="audio-item">
+								<p>ང་ལུ་ཌོ་ལར་ ༥༠༠ བྱིན་ད།</p>
+							</div>
+							
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio104"
+									src="audios/samples/money.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio104')">
+										▶ Play
+									</button>
+								</div>
+							</div>	
+						</div>
+						<p>Comment: Dzongkha TTS is not trained to speak numbers.</p>
+						<h5>Sample 5: Long Sentence</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio105"
+									src="audios/samples/long sentence 2.mp3"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio105')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<p>while studying for final exams can be overwhelming and exhausting. Maintaining a consistent schedule, taking regular breaks, and using active recall techniques can significantly improve both focus and long-term retention.</p>
+							</div>
+							<div class="audio-item">
+								<p>མཐའ་དཔྱད་ཆོས་རྒྱུགས་ཀྱི་དོན་ལུ་ དཔེ་ཆ་ལྷབ་ནི་འདི་ གནམ་མེད་ས་མེད་ལཱ་ཁག་དང་ འུ་སྡུག་སི་སི་ཅིག་འོང་ནི་ཨིནམ་དང་ ལས་འཆར་ཚུ་བརྟན་ཏོག་ཏོ་སྦེ་བཞག་ནི་དང་ དུས་རྒྱུན་དུ་བར་མཚམས་ལེན་ནི། དེ་ལས་ དྲན་པའི་དྲན་པ་བཏོན་ནིའི་ཐབས་ཤེས་ཚུ་ལག་ལེན་འཐབ་པ་ཅིན་ དམིགས་གཏད་དང་ ཡུན་རིང་གི་དྲན་པ་གཉིས་ཆ་ར་ ཤུགས་སྦེ་ཡར་དྲག་འགྱོ་ཚུགས།</p>
+							</div>
+							
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio106"
+									src="audios/samples/long sentence 2.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio106')">
+										▶ Play
+									</button>
+								</div>
+							</div>	
+						</div>
+						<h5>Sample 6: Scientic Names</h5>
+						<div class="audio-samples">
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio107"
+									src="audios/samples/scientific 2.mp3"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio107')">
+										▶ Play
+									</button>
+								</div>
+							</div>
+							<div class="audio-item">
+								<p>Sustainable electronics</p>
+							</div>
+							<div class="audio-item">
+								<p>ཡུན་བརྟན་གྱི་གློག་མེ།</p>
+							</div>
+							
+							<div class="audio-item">
+								<div class="waveform">
+									<img src="wave.jpg" alt="Waveform visualization" />
+								</div>
+								<audio
+									id="audio108"
+									src="audios/samples/scientific 2.wav"
+								></audio>
+								<div class="audio-controls">
+									<button class="play-btn" onclick="togglePlay('audio108')">
+										▶ Play
+									</button>
+								</div>
+							</div>	
+						</div>
+						<p>Comment: Machine translation cannot properly translate technical and domain specific words and sentences.</p>
 				</section>
 			</div>
 			<div class="komi-container"> 
 				<div class="text-section">
-					<p>Sorry, we haven't deployed our website. The model size is too huge to load on my laptop. I mean my COMPUTER since my laptop is literally a deskptop pc now TwT</p>
+					<p>Any feedbacks are most graciously welcomed!!!</p>
 				</div>
 				<div class="image-section">
 					<img src="sticker_3.avif" alt="sad-komi">
